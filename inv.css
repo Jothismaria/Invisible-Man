@@ -1,0 +1,152 @@
+body{background-color:black;}
+
+.container{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.t1{ border-bottom: 100px solid rgb(250,186,114);
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      height: 0;
+      width: 300px;border-radius:20px;position:relative;}
+.t1::before{width:390px;height:10px;content:"";background:rgb(221,154,86);position:absolute;top:90px;left:-45px;border-radius:0 0 10px 10px;}
+.l1{border-bottom: 150px solid rgb(250,186,114);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      height: 0;
+      width: 10px;transform:rotateX(180deg);position:absolute;left:30px}
+.l2{border-bottom: 150px solid rgb(250,186,114);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      height: 0;
+      width: 10px;transform:rotateX(180deg);position:absolute;left:350px}
+.l3{border-bottom: 80px solid rgb(250,186,114);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      height: 0;
+  width: 10px;transform:rotateX(180deg);position:absolute;left:60px}
+.l4{border-bottom: 80px solid rgb(250,186,114);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      height: 0;
+      width: 10px;transform:rotateX(180deg);position:absolute;left:320px}
+.shadow{width:350px;height:80px;background:lightgrey;border-radius:50%;filter:blur(16px) ;position:absolute;top:170px;left:25px;z-index:-1}
+.base{border-bottom: 40px solid brown;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      height: 0;
+      width: 10px;position:absolute;top:30px;left:50px;border-radius:10px;}
+.base .mouth{border-bottom: 10px solid brown;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      height: 0;
+      width: 10px;position:absolute;top:0px;transform:rotateX(180deg);left:-5px;}
+.flower{width:2px;height:12px;background:green;position:absolute;top:10px;left:3px}
+.f1{width:12px;height:12px;background:red;position:absolute;top:5px;border-radius:50%;left:-5px}
+.jug{border-bottom: 50px solid grey;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      height: 0;
+      width: 25px;position:absolute;transform:rotateX(0deg);border-radius:0 0 40% 40%;position:absolute;left:120px;top:20px;
+animation : jug1 20s forwards 6s;}
+@keyframes jug1{
+  0%,100%{transform:rotateZ(5deg)}
+  10%{top:-20px;}
+   20%{transform:rotateZ(-10deg);top:-50px}
+  30%{transform:rotateZ(60deg)}
+  50%{top:-60px;transform:rotateZ(70deg)}
+  80%{top:-60px;transform:rotateZ(110deg)}
+}
+.handle{width:30px;height:20px;border:3px solid grey;border-radius:50%;position:absolute;left:-10px;top:5px}
+.parent{animation:glas2 25s forwards 23s;position:absolute;top:10px;animation-fill-mode: forwards}
+.glass{width:20px;height:40px;background:transparent;position:absolute;top:25px;left:180px;border-radius:0 0 5px 5px;border:1px solid white;
+  animation:glass1 15s forwards 10s;animation-fill-mode: forwards;
+     }
+@keyframes glass1{
+  0%{top:-5px}
+  10%{top:-10px}
+  20%{top:-10px;transform:rotateZ(-5deg)}
+  30%{top:-20px;}
+  40%{top:-18px;left:150px}
+  50%{top:-20px;left:155px;transform:rotateZ(5deg)}
+  60%{top:-16px;left:156px}
+  100%{top:-17px;left:155px}
+}
+
+@keyframes glas2{
+  0%{top:-10px}
+  10%{top:-30px;left:20px}
+  20%{top:-32px;transform:rotateZ(-5deg)}
+  30%{top:-36px;}
+  40%{top:-38px;left:100px}
+  50%{top:-40px;left:90px}
+  60%{top:-47px;left:110px}
+  100%{top:-46px;left:110px}
+}
+.juice1{width:10px;height:40px;background:orange;position:absolute;top:-35px;left:155px;z-index:-1;
+animation:hide1 40s forwards -1s}
+@keyframes hide1{
+   0%{opacity:0}
+  10%{opacity:0}
+  20%{opacity:0}
+  30%{opacity:0}
+  40%{opacity:0}
+  50%{opacity:1}
+  60%{opacity:0;transform:rotateZ(-8deg);left:156px}
+  100%{opacity:0}
+}
+.juice2{width:20px;height:30px;background:orange;position:absolute;z-index:1;
+animation:hide2 30s forwards -1s;top:10px;border-radius:2px 2px 5px 5px}
+@keyframes hide2{
+  0%{opacity:0}
+  10%{opacity:0}
+  20%{opacity:0}
+  30%{opacity:0}
+  40%{opacity:0}
+  50%{opacity:0}
+  60%{opacity:0}
+  100%{opacity:1}
+}
+.basket{width:60px;height:20px;background:green;border-radius:0 0 50px 50px;position:absolute;top:40px;left:250px;}
+.b1{width:60px;height:10px;border-radius:50%;background:darkgreen;position:absolute;top:-5px;}
+.straw1{width:2px;height:40px;background:blue;position:absolute;top:20px;left:270px;transform:rotateZ(80deg);
+animation:shake 10s forwards 31s}
+.straw2{width:20px;height:2px;background:blue;}
+@keyframes shake{
+  0%{top:-10px}
+  10%{top:-20px;left:272px}
+  20%{top:-30px;left:270px}
+  30%{top:-40px;left:273px}
+  40%{top:-50px;left:250px}
+  50%{top:-70px;transform:rotateZ(10deg)}
+  60%{top:-100px;transform:rotateZ(-20deg);left:250px;}
+  100%{top:-80px;transform:rotateZ(0deg);z-index:-1;}
+}
+
+.j{
+animation:hide3 4s forwards 45s;animation-fill-mode:forwards}
+@keyframes hide3{
+  0%{opacity:0}
+  10%{opacity:0}
+  20%{opacity:0}
+  30%{opacity:0}
+  40%{opacity:0}
+  50%{opacity:0;}
+  60%{opacity:0;}
+  100%{opacity:0;}
+}
+.p1{animation:ps 2s forwards 10s;animation-fill-mode: forwards;}
+@keyframes ps{
+  0%,100%{top:-46px;left:110px}
+  50%{top:10px;}
+}
+.board{background-color:pink;width:150px;text-align:center;margin:0;position:absolute;top:20px;border-radius:5px;border:2px solid black;
+transform-origin:top left;
+animation:rot 0.9s forwards 51s;animation-fill-mode:forwards;left:80px;}
+h3{color:green;}
+.board::before{content:"";
+width:10px;height:10px;background:black;position:absolute;border-radius:50%;top:5px;z-index:1;left:4px}
+.board::after{content:"";
+width:10px;height:10px;background:black;position:absolute;border-radius:50%;top:5px;z-index:1;left:130px;
+}
+@keyframes rot{
+  from{transform:rotateZ(0deg)}
+    to{transform:rotateZ(60deg)}
+}
